@@ -1,16 +1,18 @@
 # O Problema das Camisetas
 
-## Variáveis de Decisão
+## Parte 1:
+
+### Variáveis de Decisão
 $x_t$: Número de camisetas produzidas na semana `t` (t = 1,2,3,4).
 
 $y_t$: Número de camisetas em excesso produzidas na semana `t` (t = 1,2,3,4).
 
-## Função Objetivo
+### Função Objetivo
 Minimizar o custo total de produção e estocagem.
 
 $Min_z = 2.00(x_1 + x_2) + 2.52(x_3 + x_4) + 2.80(y_1 + y_2 + y_3 + y_4) + 0.20s_1 + 0.20s_2 + 0.20s_3 + 0.20s_4$
 
-## Restrições:
+### Restrições:
 1) De capacidade produtiva:
 
     $x_1 + y_1 <= 25,000 + 10,000 \hspace{0.5cm} (\text{semana 1})\\
@@ -29,4 +31,6 @@ $
 3) De estoque:
 
     $s_t = (x_t + y_t) - demanda_t, \text{para }t = 1,2,3,4$
+
+## Parte 2:
 

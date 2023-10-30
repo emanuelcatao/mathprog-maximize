@@ -1,0 +1,8 @@
+data;
+
+param custoNorm := 2.00;
+param custoExtra := 2.80;
+param custoDuasUltimas := 2.50;
+param custoArm := 0.20;
+
+end;

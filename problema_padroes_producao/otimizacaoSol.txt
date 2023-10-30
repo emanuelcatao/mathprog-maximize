@@ -1,0 +1,41 @@
+Problem:    otimizacao
+Rows:       3
+Columns:    4
+Non-zeros:  10
+Status:     OPTIMAL
+Objective:  custo = 295.8333333 (MINimum)
+
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 custo        B        295.833                             
+     2 panelas_medias
+                    NL           500           500                       0.125 
+     3 panelas_grandes
+                    NL           350           350                    0.666667 
+
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 x1           B           62.5             0               
+     2 x2           NL             0             0                    0.833333 
+     3 x3           NL             0             0                     1.41667 
+     4 x4           B        116.667             0               
+
+Karush-Kuhn-Tucker optimality conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 0.00e+00 on column 0
+        max.rel.err = 0.00e+00 on column 0
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

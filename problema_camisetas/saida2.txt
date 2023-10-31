@@ -1,185 +1,207 @@
 Problem:    camisetasParte2
-Rows:       57
-Columns:    40
-Non-zeros:  120
+Rows:       55
+Columns:    56
+Non-zeros:  214
 Status:     OPTIMAL
-Objective:  Lucro = 466500 (MAXimum)
+Objective:  Lucro = 609000 (MAXimum)
 
    No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
 ------ ------------ -- ------------- ------------- ------------- -------------
-     1 Lucro        B         466500                             
-     2 r_demanda[TimeA,1]
-                    NU          1250                        1250             8 
-     3 r_demanda[TimeA,2]
-                    NU          2500                        2500            10 
-     4 r_demanda[TimeA,3]
+     1 Lucro        B         609000                             
+     2 atualiza_estoque[TimeA,1]
+                    NS             0            -0             =           4.1 
+     3 atualiza_estoque[TimeA,2]
+                    NS             0            -0             =           2.8 
+     4 atualiza_estoque[TimeA,3]
+                    NS             0            -0             =          -0.4 
+     5 atualiza_estoque[TimeA,4]
+                    NS             0            -0             =          -0.2 
+     6 atualiza_estoque[TimeB,1]
+                    NS             0            -0             =           4.1 
+     7 atualiza_estoque[TimeB,2]
+                    NS             0            -0             =           2.8 
+     8 atualiza_estoque[TimeB,3]
+                    NS             0            -0             =          -0.4 
+     9 atualiza_estoque[TimeB,4]
+                    NS             0            -0             =          -0.2 
+    10 atualiza_estoque[TimeC,1]
+                    NS             0            -0             =           4.1 
+    11 atualiza_estoque[TimeC,2]
+                    NS             0            -0             =           4.3 
+    12 atualiza_estoque[TimeC,3]
+                    NS             0            -0             =           4.5 
+    13 atualiza_estoque[TimeC,4]
+                    NS             0            -0             =          -0.2 
+    14 atualiza_estoque[TimeD,1]
+                    NS             0            -0             =           4.1 
+    15 atualiza_estoque[TimeD,2]
+                    NS             0            -0             =           4.3 
+    16 atualiza_estoque[TimeD,3]
+                    NS             0            -0             =           4.5 
+    17 atualiza_estoque[TimeD,4]
+                    NS             0            -0             =          -0.2 
+    18 r_demanda[TimeA,1]
+                    NU          1250                        1250           5.9 
+    19 r_demanda[TimeA,2]
+                    NU          2500                        2500           7.7 
+    20 r_demanda[TimeA,3]
                     B              0                         500 
-     5 r_demanda[TimeA,4]
+    21 r_demanda[TimeA,4]
                     NU             0                          -0           0.2 
-     6 r_demanda[TimeB,1]
-                    NU          1250                        1250             8 
-     7 r_demanda[TimeB,2]
-                    NU          2500                        2500            10 
-     8 r_demanda[TimeB,3]
+    22 r_demanda[TimeB,1]
+                    NU          1250                        1250           5.9 
+    23 r_demanda[TimeB,2]
+                    NU          2500                        2500           7.7 
+    24 r_demanda[TimeB,3]
                     B              0                         500 
-     9 r_demanda[TimeB,4]
+    25 r_demanda[TimeB,4]
                     NU             0                          -0           0.2 
-    10 r_demanda[TimeC,1]
-                    NU          1250                        1250             8 
-    11 r_demanda[TimeC,2]
-                    NU          2500                        2500            10 
-    12 r_demanda[TimeC,3]
+    26 r_demanda[TimeC,1]
+                    NU          1250                        1250           5.9 
+    27 r_demanda[TimeC,2]
+                    NU          2500                        2500           7.7 
+    28 r_demanda[TimeC,3]
                     NU         14500                       14500           3.5 
-    13 r_demanda[TimeC,4]
-                    B          25000                       30000 
-    14 r_demanda[TimeD,1]
-                    NU          1250                        1250             8 
-    15 r_demanda[TimeD,2]
-                    NU          2500                        2500            10 
-    16 r_demanda[TimeD,3]
+    29 r_demanda[TimeC,4]
+                    NU         30000                       30000           4.3 
+    30 r_demanda[TimeD,1]
+                    NU          1250                        1250           5.9 
+    31 r_demanda[TimeD,2]
+                    NU          2500                        2500           7.7 
+    32 r_demanda[TimeD,3]
                     NU         14500                       14500           3.5 
-    17 r_demanda[TimeD,4]
-                    B          25000                       30000 
-    18 prodN[TimeA,1]
-                    B           1250                       25000 
-    19 prodN[TimeA,2]
-                    B           2500                       25000 
-    20 prodN[TimeA,3]
-                    B              0                       25000 
-    21 prodN[TimeA,4]
-                    B              0                       25000 
-    22 prodN[TimeB,1]
-                    B           1250                       25000 
-    23 prodN[TimeB,2]
-                    B           2500                       25000 
-    24 prodN[TimeB,3]
-                    B              0                       25000 
-    25 prodN[TimeB,4]
-                    B              0                       25000 
-    26 prodN[TimeC,1]
-                    B           1250                       25000 
-    27 prodN[TimeC,2]
-                    B           2500                       25000 
-    28 prodN[TimeC,3]
-                    B          14500                       25000 
-    29 prodN[TimeC,4]
-                    NU         25000                       25000           4.5 
-    30 prodN[TimeD,1]
-                    B           1250                       25000 
-    31 prodN[TimeD,2]
-                    B           2500                       25000 
-    32 prodN[TimeD,3]
-                    B          14500                       25000 
-    33 prodN[TimeD,4]
-                    NU         25000                       25000           4.5 
-    34 prodE[TimeA,1]
-                    B              0                       10000 
-    35 prodE[TimeA,2]
-                    B              0                       10000 
-    36 prodE[TimeB,1]
-                    B              0                       10000 
-    37 prodE[TimeB,2]
-                    B              0                       10000 
-    38 prodE[TimeC,1]
-                    B              0                       10000 
-    39 prodE[TimeC,2]
-                    B              0                       10000 
-    40 prodE[TimeD,1]
-                    B              0                       10000 
-    41 prodE[TimeD,2]
-                    B              0                       10000 
-    42 venda_prod[TimeA,1]
-                    NU             0                          -0           2.2 
-    43 venda_prod[TimeA,2]
-                    NU             0                          -0           2.2 
-    44 venda_prod[TimeA,3]
-                    NU             0                          -0           3.2 
-    45 venda_prod[TimeA,4]
+    33 r_demanda[TimeD,4]
+                    NU         30000                       30000           4.3 
+    34 prodN[1]     NU         25000                       25000           2.1 
+    35 prodN[2]     NU         25000                       25000           2.3 
+    36 prodN[3]     B           9000                       25000 
+    37 prodN[4]     NU         25000                       25000           0.2 
+    38 prodE[1]     NU         10000                       10000           1.3 
+    39 prodE[2]     NU         10000                       10000           1.5 
+    40 venda_estoque_prod[TimeA,1]
                     B              0                          -0 
-    46 venda_prod[TimeB,1]
-                    NU             0                          -0           2.2 
-    47 venda_prod[TimeB,2]
-                    NU             0                          -0           2.2 
-    48 venda_prod[TimeB,3]
-                    NU             0                          -0           3.2 
-    49 venda_prod[TimeB,4]
+    41 venda_estoque_prod[TimeA,2]
+                    NU             0                          -0           1.5 
+    42 venda_estoque_prod[TimeA,3]
+                    NU             0                          -0           3.4 
+    43 venda_estoque_prod[TimeA,4]
                     B              0                          -0 
-    50 venda_prod[TimeC,1]
-                    NU             0                          -0           2.2 
-    51 venda_prod[TimeC,2]
-                    NU             0                          -0           2.2 
-    52 venda_prod[TimeC,3]
-                    NU             0                          -0           4.7 
-    53 venda_prod[TimeC,4]
-                    NU             0                          -0           9.2 
-    54 venda_prod[TimeD,1]
-                    NU             0                          -0           2.2 
-    55 venda_prod[TimeD,2]
-                    NU             0                          -0           2.2 
-    56 venda_prod[TimeD,3]
-                    NU             0                          -0           4.7 
-    57 venda_prod[TimeD,4]
-                    NU             0                          -0           9.2 
+    44 venda_estoque_prod[TimeB,1]
+                    B              0                          -0 
+    45 venda_estoque_prod[TimeB,2]
+                    NU             0                          -0           1.5 
+    46 venda_estoque_prod[TimeB,3]
+                    NU             0                          -0           3.4 
+    47 venda_estoque_prod[TimeB,4]
+                    B              0                          -0 
+    48 venda_estoque_prod[TimeC,1]
+                    B         -30000                          -0 
+    49 venda_estoque_prod[TimeC,2]
+                    B         -44500                          -0 
+    50 venda_estoque_prod[TimeC,3]
+                    B         -30000                          -0 
+    51 venda_estoque_prod[TimeC,4]
+                    NU             0                          -0           4.9 
+    52 venda_estoque_prod[TimeD,1]
+                    B              0                          -0 
+    53 venda_estoque_prod[TimeD,2]
+                    B         -10500                          -0 
+    54 venda_estoque_prod[TimeD,3]
+                    B          -5000                          -0 
+    55 venda_estoque_prod[TimeD,4]
+                    NU             0                          -0           4.9 
 
    No. Column name  St   Activity     Lower bound   Upper bound    Marginal
 ------ ------------ -- ------------- ------------- ------------- -------------
-     1 x[TimeA,1]   B           1250             0               
-     2 x[TimeA,2]   B           2500             0               
-     3 x[TimeA,3]   NL             0             0                        -1.5 
-     4 x[TimeA,4]   NL             0             0                        -4.7 
-     5 x[TimeB,1]   B           1250             0               
-     6 x[TimeB,2]   B           2500             0               
-     7 x[TimeB,3]   NL             0             0                        -1.5 
-     8 x[TimeB,4]   NL             0             0                        -4.7 
-     9 x[TimeC,1]   B           1250             0               
-    10 x[TimeC,2]   B           2500             0               
-    11 x[TimeC,3]   B          14500             0               
-    12 x[TimeC,4]   B          25000             0               
-    13 x[TimeD,1]   B           1250             0               
-    14 x[TimeD,2]   B           2500             0               
-    15 x[TimeD,3]   B          14500             0               
-    16 x[TimeD,4]   B          25000             0               
-    17 y[TimeA,1]   NL             0             0                        -0.8 
-    18 y[TimeA,2]   NL             0             0                        -0.8 
-    19 y[TimeB,1]   NL             0             0                        -0.8 
-    20 y[TimeB,2]   NL             0             0                        -0.8 
-    21 y[TimeC,1]   NL             0             0                        -0.8 
-    22 y[TimeC,2]   NL             0             0                        -0.8 
-    23 y[TimeD,1]   NL             0             0                        -0.8 
-    24 y[TimeD,2]   NL             0             0                        -0.8 
+     1 x[TimeA,3]   NL             0             0                        -1.5 
+     2 x[TimeA,4]   NL             0             0                        -4.9 
+     3 x[TimeB,3]   NL             0             0                        -1.5 
+     4 x[TimeB,4]   NL             0             0                        -4.9 
+     5 x[TimeC,3]   NL             0             0                       < eps
+     6 x[TimeC,4]   NL             0             0                       < eps
+     7 x[TimeD,3]   B           9000             0               
+     8 x[TimeD,4]   B          25000             0               
+     9 x[TimeA,1]   B           1250             0               
+    10 x[TimeA,2]   B           2500             0               
+    11 x[TimeB,1]   B           1250             0               
+    12 x[TimeB,2]   B           2500             0               
+    13 x[TimeC,1]   B          21250             0               
+    14 x[TimeC,2]   B           7000             0               
+    15 x[TimeD,1]   B           1250             0               
+    16 x[TimeD,2]   B          13000             0               
+    17 y[TimeA,1]   NL             0             0                       < eps
+    18 y[TimeA,2]   NL             0             0                       < eps
+    19 y[TimeB,1]   NL             0             0                       < eps
+    20 y[TimeB,2]   NL             0             0                       < eps
+    21 y[TimeC,1]   B          10000             0               
+    22 y[TimeC,2]   B          10000             0               
+    23 y[TimeD,1]   NL             0             0                       < eps
+    24 y[TimeD,2]   NL             0             0                       < eps
     25 v[TimeA,1]   B           1250             0               
     26 v[TimeA,2]   B           2500             0               
-    27 v[TimeA,3]   B              0             0               
-    28 v[TimeA,4]   B              0             0               
-    29 v[TimeB,1]   B           1250             0               
-    30 v[TimeB,2]   B           2500             0               
-    31 v[TimeB,3]   B              0             0               
-    32 v[TimeB,4]   B              0             0               
-    33 v[TimeC,1]   B           1250             0               
-    34 v[TimeC,2]   B           2500             0               
-    35 v[TimeC,3]   B          14500             0               
-    36 v[TimeC,4]   B          25000             0               
-    37 v[TimeD,1]   B           1250             0               
-    38 v[TimeD,2]   B           2500             0               
+    27 v[TimeB,1]   B           1250             0               
+    28 v[TimeB,2]   B           2500             0               
+    29 v[TimeC,1]   B           1250             0               
+    30 v[TimeC,2]   B           2500             0               
+    31 v[TimeD,1]   B           1250             0               
+    32 v[TimeD,2]   B           2500             0               
+    33 v[TimeA,3]   B              0             0               
+    34 v[TimeA,4]   B              0             0               
+    35 v[TimeB,3]   B              0             0               
+    36 v[TimeB,4]   B              0             0               
+    37 v[TimeC,3]   B          14500             0               
+    38 v[TimeC,4]   B          30000             0               
     39 v[TimeD,3]   B          14500             0               
-    40 v[TimeD,4]   B          25000             0               
+    40 v[TimeD,4]   B          30000             0               
+    41 estoque[TimeA,1]
+                    NL             0             0                       < eps
+    42 estoque[TimeA,2]
+                    B              0             0               
+    43 estoque[TimeA,3]
+                    B              0             0               
+    44 estoque[TimeA,4]
+                    B              0             0               
+    45 estoque[TimeB,1]
+                    NL             0             0                       < eps
+    46 estoque[TimeB,2]
+                    B              0             0               
+    47 estoque[TimeB,3]
+                    B              0             0               
+    48 estoque[TimeB,4]
+                    B              0             0               
+    49 estoque[TimeC,1]
+                    B          30000             0               
+    50 estoque[TimeC,2]
+                    B          44500             0               
+    51 estoque[TimeC,3]
+                    B          30000             0               
+    52 estoque[TimeC,4]
+                    B              0             0               
+    53 estoque[TimeD,1]
+                    NL             0             0                       < eps
+    54 estoque[TimeD,2]
+                    B          10500             0               
+    55 estoque[TimeD,3]
+                    B           5000             0               
+    56 estoque[TimeD,4]
+                    B              0             0               
 
 Karush-Kuhn-Tucker optimality conditions:
 
-KKT.PE: max.abs.err = 1.16e-10 on row 1
-        max.rel.err = 6.68e-17 on row 1
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
         High quality
 
 KKT.PB: max.abs.err = 0.00e+00 on row 0
         max.rel.err = 0.00e+00 on row 0
         High quality
 
-KKT.DE: max.abs.err = 0.00e+00 on column 0
-        max.rel.err = 0.00e+00 on column 0
+KKT.DE: max.abs.err = 8.88e-16 on column 41
+        max.rel.err = 9.25e-17 on column 41
         High quality
 
-KKT.DB: max.abs.err = 0.00e+00 on row 0
-        max.rel.err = 0.00e+00 on row 0
+KKT.DB: max.abs.err = 4.44e-16 on column 24
+        max.rel.err = 4.44e-16 on column 24
         High quality
 
 End of output

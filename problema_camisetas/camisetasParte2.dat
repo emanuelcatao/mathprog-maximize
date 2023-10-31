@@ -8,6 +8,11 @@ param custoArm := 0.20;
 param capacidadeNormal := 25000;
 param capacidadeExtra := 10000;
 
+param inicioSemanasFinais := 3;
+param fimSemanasFinais := 4;
+
+param fimSemanasIniciais := 2;
+
 set S := 1 2 3 4;
 set TIMES := TimeA TimeB TimeC TimeD;
 set SExtra := 1 2;

@@ -1,30 +1,32 @@
-#so pra dizer que usei .dat
 param custoNorm;
 param custoExtra;
-param custoDuasUltimas; #nome feio, eu sei
-param custoArm;
+param custoDuasUltimas; # custo de produção das duas últimas semanas
+param custoArm; # custo de armazenamento por semana
+param capacidadeNormal;
+param capacidadeExtra;
 
-set S := 1..4;
-set SExtra := 1..2;
+set S; # semanas
+set SExtra; # semanas com produção extra
 
-var x{i in S} >= 0; # produzidas normal
-var y{i in SExtra} >= 0; # produzidas extra - primeiras semanas
-var s{i in S} >= 0; # estoque
+param demanda{S};
 
-#funcao objetivo
-minimize Ct:
-  sum{i in SExtra} (custoNorm * x[i]) #aqui é o 2*(x[1] + x[2]) em que x[1] é a produção normal da semana 1 e x[2] é a produção normal da semana 2
-   + sum{i in SExtra} (custoExtra * y[i]) #aqui é o 2,8*(y[1] + y[2]) em que y[1] é a produção extra da semana 1 e y[2] é a produção extra da semana 2
-   + sum{i in 3..4} (custoDuasUltimas * x[i]) #aqui é o 2,5*(x[3] + x[4]) em que x[3] é a produção normal da semana 3 e x[4] é a produção normal da semana 4
-   + sum{i in S} (custoArm * s[i]); #aqui é o 0,2*(s[1] + s[2] + s[3] + s[4]) em que s[1] é o estoque da semana 1, s[2] é o estoque da semana 2, s[3] é o estoque da semana 3 e s[4] é o estoque da semana 4
+var x{S} >= 0; # produzidas normaois
+var y{SExtra} >= 0; # produzidas extra - primeiras semanas
+var s{S} >= 0; # estoque
 
-subj to demanda1: x[1] + y[1] - s[1] = 5000;
-subj to demanda2: x[2] + y[2] + s[1] - s[2] = 10000;
-subj to demanda3: x[3] + s[2] - s[3] = 30000;
-subj to demanda4: x[4] + s[3] - s[4] = 60000;
+minimize Ct: # custo total
+  sum{i in SExtra} (custoNorm * x[i] + custoExtra * y[i]) # custo de produção
+  + sum{i in 3..4} (custoDuasUltimas * x[i]) # custo de produção das duas semanas finais
+  + sum{i in S} (custoArm * s[i]); # csuto estoque
 
-subj to capProdN{i in S}: x[i] <= 25000; #capacidade de producao normal
-subj to capProdE{i in SExtra}: y[i] <= 10000; #capacidade de producao extra
+subj to demandaSemana1{t in S: t = 1}: 
+    x[t] + y[t] - s[t] = demanda[t]; # demanda da semana 1
+subj to demandaSemana2{t in S: t > 1 and t <= 2}: 
+    x[t] + y[t] + s[t-1] - s[t] = demanda[t]; # demanda da semana 2
+subj to demandaSemana34{t in S: t > 2}: 
+    x[t] + s[t-1] - s[t] = demanda[t]; # demanda semana 3 e 4
+subj to capProdN{t in S}: x[t] <= capacidadeNormal;
+subj to capProdE{t in SExtra}: y[t] <= capacidadeExtra;
 
 end;
 

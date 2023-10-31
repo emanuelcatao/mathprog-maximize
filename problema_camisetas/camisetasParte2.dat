@@ -5,6 +5,13 @@ param custoExtra := 2.80;
 param custoDuasUltimas := 2.50;
 param custoArm := 0.20;
 
+param capacidadeNormal := 25000;
+param capacidadeExtra := 10000;
+
+set S := 1 2 3 4;
+set TIMES := TimeA TimeB TimeC TimeD;
+set SExtra := 1 2;
+
 param demanda : 
          1      2      3      4 :=
 TimeA   1250  2500    500     0

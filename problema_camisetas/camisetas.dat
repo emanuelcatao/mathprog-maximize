@@ -5,4 +5,16 @@ param custoExtra := 2.80;
 param custoDuasUltimas := 2.50;
 param custoArm := 0.20;
 
+set S := 1 2 3 4;
+set SExtra := 1 2;
+
+param demanda :=
+1 5000
+2 10000
+3 30000
+4 60000;
+
+param capacidadeNormal := 25000;
+param capacidadeExtra := 10000;
+
 end;
